@@ -1,4 +1,79 @@
-#heading{
-    color: red;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    /* margin-top: 2px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 3vw;
+    padding-right: 5vw;
+    background-color: aliceblue;
+    /* border: 1px solid black; */
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.nav-items ul{
+    display: flex;
+    gap: 40px;
+}
+.nav-items ul li{
+    list-style: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+.body{
+    background-color: beige;
+}
+.search-box{
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.search-box input{
+    height: 40px;
+    width: 40vw;
+    outline: none;
+    font-size: 20px;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.res-card{
+    margin-top: 10px;
+    background-color: aliceblue;
+    padding: 1vw 1vw;
+    width: 270px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.res-logo{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.name{
+    padding: 5px;
+}
+.dish{
+    padding: 5px;
+}
+.rating{
+    padding: 5px;
+}
+.time{
+    padding: 5px;
 }
