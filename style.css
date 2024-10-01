@@ -45,8 +45,9 @@
   font-size: 20px;
   border-radius: 10px;
   padding: 0px 5px;
+  position: relative;
 }
-.search-box button {
+.search-box .btn{
   height: 40px;
   width: 110px;
   padding: 0px 5px;
@@ -87,4 +88,40 @@
 }
 .time {
   padding: 5px;
+}
+.shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.shimmer-cards{
+  margin-top: 10px;
+  background-color: aliceblue;
+  padding: 1vw 1vw;
+  width: 270px;
+  height: 400px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.login{
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: black;
+  font-size: 20px;
+  background-color: transparent;
+}
+.searchbtn{
+  position: absolute;
+  right: 55%;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.searchbtn i{
+  font-size: 30px;
 }
