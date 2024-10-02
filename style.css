@@ -145,6 +145,7 @@ body {
   border-radius: 5px;
   margin-left: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: black;
 }
 
 .res-card:hover {
@@ -154,34 +155,30 @@ body {
   cursor: pointer;
 }
 
+.res-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.res-container a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .res-logo {
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
 }
 
-.name {
-  padding: 5px;
-  font-size: 18px;
-  color: #333;
-}
-
-.dish {
-  padding: 5px;
-  font-size: 18px;
-  color: #333;
-}
-
-.rating {
-  padding: 5px;
-  font-size: 18px;
-  color: #333;
-}
-
+.name,
+.dish,
+.rating,
 .time {
   padding: 5px;
   font-size: 18px;
   color: #333;
+  text-decoration: none;
 }
 
 .shimmer-container {
@@ -227,4 +224,59 @@ body {
 .login:hover {
   background-color: #007bff;
   color: white;
+}
+
+.head a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.774);
+}
+.menu-container {
+  background-color: white;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.restaurant-name {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.restaurant-cuisines,
+.restaurant-cost,
+.restaurant-location,
+.restaurant-rating {
+  font-size: 18px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.menu {
+  margin-top: 20px;
+}
+
+.menu h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu li {
+  font-size: 18px;
+  color: #333;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+  border-bottom: none;
 }
