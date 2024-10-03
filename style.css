@@ -280,3 +280,60 @@ body {
 .menu li:last-child {
   border-bottom: none;
 }
+
+.details{
+  margin-top: 50px;
+  border: 1px solid black;
+  padding: 0px 10px;
+  width: fit-content;
+}
+/* OfflinePage.css */
+
+.offline-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+}
+
+.offline-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.offline-icon {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.offline-title {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.offline-message {
+  font-size: 1.2rem;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #0056b3;
+}
