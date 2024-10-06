@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: space-between;
   padding: 0px 3vw;
@@ -287,7 +287,7 @@ body {
   padding: 0px 10px;
   width: fit-content;
 }
-/* OfflinePage.css */
+
 
 .offline-page {
   display: flex;
@@ -337,3 +337,7 @@ body {
 .retry-button:hover {
   background-color: #0056b3;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

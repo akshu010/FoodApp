@@ -3,7 +3,7 @@ const OfflinePage = () => {
     <div className="offline-page">
       <div className="offline-container">
         <img
-          src="https://img.icons8.com/ios/100/000000/no-connection.png"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXK2tnS4Rvb5Q8EfkGBrY14q25BCmrx8snIA&s"
           alt="Offline Icon"
           className="offline-icon"
         />
