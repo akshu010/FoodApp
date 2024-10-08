@@ -1,23 +1,24 @@
-import RestaurantCard from "./ResturantCard.js";
-import { useEffect, useState } from "react";
+import RestaurantCard, { withPromtedLable } from "./ResturantCard.js";
+import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 import OfflinePage from "./OfflinePage.js";
 import { MAIN_API } from "../utils/constants.js";
+import UserContext from "../utils/UserContext.js";
 
 const Body = () => {
   const [ListOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredResturants, setFilteredResturants] = useState([]);
   const [serachText, setSearchText] = useState("");
+  const RestaurantCardPermoted = withPromtedLable(RestaurantCard);
+  console.log(ListOfRestaurants);
 
   useEffect(() => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const data = await fetch(
-      MAIN_API
-    );
+    const data = await fetch(MAIN_API);
     const json = await data.json();
 
     setListOfRestaurants(
@@ -27,11 +28,10 @@ const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+  const { loggedInUser, setUserName } = useContext(UserContext);
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) {
-    return (
-     <OfflinePage/>
-    );
+    return <OfflinePage />;
   }
   return ListOfRestaurants.length === 0 ? (
     <Shimmer />
@@ -70,6 +70,17 @@ const Body = () => {
         >
           Top Rated⭐
         </button>
+        <label className="p-2">
+          User :
+          <input
+            className="w-[150px] p-2 border-none outline-none rounded-xl"
+            type="text"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
+          />
+        </label>
       </div>
       <div className="res-container">
         {filteredResturants.map((restaurant) => (
@@ -77,8 +88,11 @@ const Body = () => {
             key={restaurant?.info?.id}
             to={"/resturant/" + restaurant?.info?.id}
           >
-            {" "}
-            <RestaurantCard resData={restaurant} />
+            {restaurant.info.promoted ? (
+              <RestaurantCardPermoted resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
