@@ -12,7 +12,7 @@ const Body = () => {
   const [filteredResturants, setFilteredResturants] = useState([]);
   const [serachText, setSearchText] = useState("");
   const RestaurantCardPermoted = withPromtedLable(RestaurantCard);
-  console.log(ListOfRestaurants);
+  // console.log(ListOfRestaurants);
 
   useEffect(() => {
     fetchData();
